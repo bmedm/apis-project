@@ -127,3 +127,10 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+.DS_Store
+booking.csv
+hotel_bookings.csv
+.ipynb_checkpoints
+.env
+.Hotel_Reviews.csv
+studio_ghibli.csv
