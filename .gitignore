@@ -134,3 +134,5 @@ hotel_bookings.csv
 .env
 .Hotel_Reviews.csv
 studio_ghibli.csv
+scores.csv
+ghibli_clean.csv
