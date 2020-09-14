@@ -70,8 +70,24 @@ def score(x):
     Media de la puntuacion de las peliculas de cada director
     """
     return scores[f'{x}']
-
-
-
-
-
+    
+def director1(d):
+    director=['Hayao Miyazaki','Isao Takahata','Yoshifumi Kondō','Hiroyuki Morita','Gorō Miyazaki','Hiromasa Yonebayashi']
+    if d not in director:
+        raise argparse.ArgumentTypeError(f"No hay peliculas de {d}")
+    else:
+        print(director(d))
+        
+def scoredirector(x):
+    director2=['Hayao Miyazaki','Isao Takahata','Yoshifumi Kondō','Hiroyuki Morita','Gorō Miyazaki','Hiromasa Yonebayashi']
+    if x not in director2:
+        raise argparse.ArgumentTypeError(f"No hay peliculas de {x}")
+    else:
+        print(score(x))
+def titlefilm(x):
+    films=['Castle in the Sky','My Neighbor Totoro','When Marnie Was There','Pom Poko','Howls Moving Castle','The Tale of the Princess Kaguya','Only Yesterday','Porco Rosso','Princess Mononoke','Ponyo','Grave of the Fireflies','Arrietty','Whisper of the Heart','The Wind Rises','The Cat Returns',
+        "Kiki's Delivery Service",'Tales from Earthsea','From Up on Poppy Hill','My Neighbors the Yamadas','Spirited Away']
+    if x not in films:
+        raise argparse.ArgumentTypeError(f"No hay peliculas de {x}")
+    else:
+        print(title(x))
