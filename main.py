@@ -5,8 +5,6 @@ import src.source as src
 import pandas as pd
 
 
-#f = pd.read_csv('input/ghibli_clean.csv')
-
 
 def main():
     #print(args)
@@ -31,7 +29,6 @@ def main():
         print(src.titlefilm(args.title))
     elif args.director==None and args.title==None and args.scoredir!=None:
         print(src.scoredirector(args.scoredir))
-
     
 
 

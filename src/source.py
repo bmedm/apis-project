@@ -36,9 +36,10 @@ def geturl(path="films/"):
 
 df=pd.read_csv('input/ghibli_clean.csv')
 scores=pd.read_csv('input/scores.csv')
+
 def director1(d):
-    director=['Hayao Miyazaki','Isao Takahata','Yoshifumi Kondō','Hiroyuki Morita','Gorō Miyazaki','Hiromasa Yonebayashi']
-    if d not in director:
+    directors=['Hayao Miyazaki','Isao Takahata','Yoshifumi Kondō','Hiroyuki Morita','Gorō Miyazaki','Hiromasa Yonebayashi']
+    if d not in directors:
         raise argparse.ArgumentTypeError(f"No hay peliculas de {d}")
     else:
         print(director(d))
@@ -53,7 +54,7 @@ def director(x):
     """
     Dataframe solo con datos del director elegido
     """
-    return df[df['director']==x][['title','score','director','year']]
+    return df[df['director']==f'{x}'][['title','score','director','year']]
 
 def title(t):
     """
@@ -71,12 +72,6 @@ def score(x):
     """
     return scores[f'{x}']
     
-def director1(d):
-    director=['Hayao Miyazaki','Isao Takahata','Yoshifumi Kondō','Hiroyuki Morita','Gorō Miyazaki','Hiromasa Yonebayashi']
-    if d not in director:
-        raise argparse.ArgumentTypeError(f"No hay peliculas de {d}")
-    else:
-        print(director(d))
         
 def scoredirector(x):
     director2=['Hayao Miyazaki','Isao Takahata','Yoshifumi Kondō','Hiroyuki Morita','Gorō Miyazaki','Hiromasa Yonebayashi']
